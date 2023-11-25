@@ -15,3 +15,12 @@ GIT
   git remote add origin git@github.com:Lucas-menezzes/project-django.git
   git push -u origin main 
   
+migrando a base dados
+
+python manage.py makemigrations
+python manage.py migrate
+
+criando super user
+
+python manage.py createsuperuser
+python manage.py changepassword username
