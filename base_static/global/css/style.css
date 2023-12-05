@@ -210,6 +210,15 @@
     border: 1px solid var(--link-light-color);
   }
   
+  .search-button {
+    font-size: var(--medium-font-size);
+    padding: 1rem 2rem;
+    border: 1px solid var(--link-light-color);
+    border-radius: var(--default-border-radius);
+    cursor: pointer;
+}
+
+  
   .search-input:focus {
     box-shadow: 0 0 15px var(--link-light-color);
   }
