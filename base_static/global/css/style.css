@@ -216,9 +216,8 @@
     border: 1px solid var(--link-light-color);
     border-radius: var(--default-border-radius);
     cursor: pointer;
-}
-
-  
+  }
+ 
   .search-input:focus {
     box-shadow: 0 0 15px var(--link-light-color);
   }
@@ -232,7 +231,14 @@
     border-radius: var(--default-border-radius);
     font-size: var(--smaller-font-size);
   }
-  
+  .btn {
+    max-width: 600px;
+    margin: auto;
+
+    padding: var(--spacing);
+    text-align: center;
+  }
+
   .message.success {
     background: rgba(0, 255, 0, 0.3);
     border: 1px solid rgba(0, 255, 0, 90%);

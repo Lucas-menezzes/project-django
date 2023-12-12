@@ -50,10 +50,8 @@ def search(request):
             Q(last_name__icontains=search_value)
             )\
         .order_by('-id')[10:20]
-
     context={
         'contacts': contacts,
-
     }
     return render(
         request,
