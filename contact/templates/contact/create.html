@@ -1,9 +1,9 @@
 {% extends "global/base.html" %}
 {% block content %}
     <h1> Create Contacts</h1>
-    <div class="fomr-content">
+    <div class="form-content">
         <form 
-            action="{% url 'contact:create' %}" 
+            action="{{ form_action }}" 
             method="POST"
             enctype="multipart/form-data"
         >
@@ -14,7 +14,7 @@
                 <div class="form-group">
                     <label for="{{field.id_for_label}}">{{field.label}}</label>
                     {{field}}
-                    {{field.erros}}
+                    {{field.errors}}
                 </div>
             {% endfor %}
         </div>
