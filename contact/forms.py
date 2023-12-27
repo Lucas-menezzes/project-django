@@ -3,9 +3,16 @@ from django import forms
 from . import models
 
 class ContactForm(forms.ModelForm):
+    picture = forms.ImageField(
+        widget= forms.FileInput(
+            attrs={
+                "accept":  'image/*',
+            }
+        )
+    )
     class Meta:
         model = models.Contact
-        fields = ('first_name', 'last_name', 'phone', 'description', 'email', 'category')
+        fields = ('first_name', 'last_name', 'phone', 'description', 'email', 'category', 'picture')
     
     def clean_first_name(self):
         first_name = self.cleaned_data.get('first_name')
