@@ -12,7 +12,7 @@ def register(request):
         if form.is_valid():
             form.save()
             messages.success(request, "Registro com sucesso!!")
-            redirect('contact:index')
+            return redirect('contact:index')
         else:
             messages.error(request," Erro no cadastro ")
 

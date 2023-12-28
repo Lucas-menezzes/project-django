@@ -4,6 +4,8 @@ from django import forms
 from . import models
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
+from django.contrib.auth.forms import AuthenticationForm
+
 
 class ContactForm(forms.ModelForm):
     picture = forms.ImageField(
@@ -73,3 +75,8 @@ class RegisterForm(UserCreationForm):
             raise forms.ValidationError('Email ja cadastrado')
         
         return email
+    
+class LoginForm(AuthenticationForm):
+    class Meta:
+        model = AuthenticationForm
+        fields = ('username', 'password')
