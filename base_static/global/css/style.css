@@ -190,12 +190,15 @@ svg {
 }
 .message {
   max-width: 600px;
-  margin: var(--spacing) auto;
-  margin-top: calc(var(--spacing) * 2);
+  margin: 0 auto;
+  margin-bottom: calc(var(--spacing) * 1);
   padding: var(--spacing);
   text-align: center;
   border-radius: var(--default-border-radius);
   font-size: var(--smaller-font-size);
+  position: fixed;
+  bottom: var(--spacing);
+  right: var(--spacing);
 }
 .message.success {
   background: rgba(0, 255, 0, 0.3);
