@@ -14,5 +14,6 @@ urlpatterns = [
     # user CRUD
     path('user/create/', views.register, name='register'),
     path('user/authenticator/', views.authenticator, name='authenticator'),
+    path('user/logout/', views.logout_view, name='logout'),
 
 ]

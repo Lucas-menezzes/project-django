@@ -3,9 +3,13 @@
 {% block content %}
     <div class="form-wrapper">
 
-        <h2> Login </h2>
-
-        {% include "contact/partials/user-form.html" %}
-
+        <h2> Login  </h2>
+        {% if user.is_authdsenticated %}
+            <p> Voce fez login com {{ user.username }}.
+                Clique em <button class='btn' href="{% url "contact:logout" %}"> Sair </button>
+            </p>
+        {% else %}
+            {% include "contact/partials/user-form.html" %}
+        {% endif %}
     </div>
 {% endblock content %}

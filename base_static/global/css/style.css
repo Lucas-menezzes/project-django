@@ -68,6 +68,15 @@ svg {
 .header-link:hover {
   filter: brightness(70%);
 }
+
+.header-buttons {
+  display: flex;
+  gap: 10px; /* Ajuste conforme necessário */
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+}
 .menu {
   margin: var(--spacing);
 }

@@ -3,6 +3,9 @@
         <a href="{% url "contact:index" %}" class="header-link">
             Agenda
         </a>
+        <div class="header-buttons">
+           <button class='btn header-buttons' onclick=window.location.href="{% url "contact:logout" %}"> Sair </button>
+        </div>
     </h1>
     <nav class='menu'>
         <ul class='menu-list'>
