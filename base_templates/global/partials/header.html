@@ -4,7 +4,10 @@
             Agenda
         </a>
         <div class="header-buttons">
-           <button class='btn header-buttons' onclick=window.location.href="{% url "contact:logout" %}"> Sair </button>
+            {% if user.is_authenticated %}
+                <button class='btn btn-logout' onclick=window.location.href="{% url "contact:logout" %}"> Sair </button>
+            {% endif %}
+           
         </div>
     </h1>
     <nav class='menu'>
@@ -15,24 +18,25 @@
                 </a>
             </li>
             <li class='menu-item'>
-                <a href="" class="menu-link">
-                    Link
+                <a href="{% url "contact:user_update" %}" class="menu-link">
+                    User Edit
                 </a>
             </li>
         </ul>
     </nav>    
-    
     <div class="search">
         <form 
             action="{% url "contact:search" %}" 
             method="get"
         >
-            <input type="search" 
-            name="q"
-            id="search"
-            class="search-input"
-            placeholder="Search">
-            <button class="search-button" type="submit"> Buscar
+    {% if user.is_authenticated %}
+        <input type="search" 
+        name="q"
+        id="search"
+        class="search-input"
+        placeholder="Search">
+        <button class="search-button" type="submit"> Buscar
+    {% endif %}
         </form>
     </div>
 </header>

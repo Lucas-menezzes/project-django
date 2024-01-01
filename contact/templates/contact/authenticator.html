@@ -6,7 +6,7 @@
         <h2> Login  </h2>
         {% if user.is_authdsenticated %}
             <p> Voce fez login com {{ user.username }}.
-                Clique em <button class='btn' href="{% url "contact:logout" %}"> Sair </button>
+                Clique em <button class='btn btn-logout' href="{% url "contact:logout" %}"> Sair </button>
             </p>
         {% else %}
             {% include "contact/partials/user-form.html" %}
